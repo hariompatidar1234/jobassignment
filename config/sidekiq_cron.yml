@@ -1,0 +1,9 @@
+fetch_users_job:
+  cron: "*/1 * * * *"  # Run every 1 minute
+  class: "FetchUsersJob"
+  queue: default
+
+process_users_job:
+  cron: "*/2 * * * *"  # Run every 2 minutes
+  class: "ProcessDailyStatsJob"
+  queue: default
