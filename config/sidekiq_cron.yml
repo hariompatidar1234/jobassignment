@@ -1,9 +1,9 @@
 fetch_users_job:
-  cron: "*/1 * * * *"  # Run every 1 minute
+  cron: "*/60 * * * *"  # Run every 1 hour
   class: "FetchUsersJob"
   queue: default
 
 process_users_job:
-  cron: "*/2 * * * *"  # Run every 2 minutes
+  cron: "0 0 * * *"  # Run once a day at midnight
   class: "ProcessDailyStatsJob"
   queue: default
