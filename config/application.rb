@@ -13,6 +13,7 @@ module TestAssignment
     config.active_job.queue_adapter = :sidekiq
       config.active_record.cache_versioning = false
       config.active_job.queue_name_prefix = Rails.env
+      config.api_only = true
 
     # Configuration for the application, engines, and railties goes here.
     #
